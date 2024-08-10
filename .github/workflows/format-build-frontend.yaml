@@ -37,3 +37,8 @@ jobs:
 
       - name: Build Frontend
         run: npm run build
+
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main'
+        uses: actions/jekyll-build-pages@v1
+ 
